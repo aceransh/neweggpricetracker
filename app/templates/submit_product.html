@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Submit Newegg Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Submit Newegg Product</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="url">Product URL</label>
+                <input type="text" id="url" name="url" placeholder="Enter Newegg product URL" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <h2>Tracked Products</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Timestamp</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>
+                        <a href="{{ product[2] }}" target="_blank">{{ product[1][:75] }}...</a>
+                    </td>
+                    <td>${{ product[3] }}</td>
+                    <td>{{ product[4] }}</td>
+                    <td>
+                        <form action="{{ url_for('check_price_now', id=product[0]) }}" method="POST" class="inline-form">
+                            <button type="submit" class="info">Check Price Now</button>
+                        </form>
+                        <form action="{{ url_for('delete_product', id=product[0]) }}" method="POST" class="inline-form">
+                            <button type="submit" class="danger">Delete Product</button>
+                        </form>
+                        <a href="{{ url_for('display_price_history', id=product[0]) }}" class="btn-secondary">Show Price History</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

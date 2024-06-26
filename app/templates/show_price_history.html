@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Price History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Price History of {{ product_name }}</h1>
+        <img src="{{ url_for('static', filename='plots/' ~ image_path.split('/')[-1]) }}" alt="Price History Plot" class="img-fluid">
+        <br>
+        <a href="{{ url_for('submit_product') }}" class="btn">Back to Products</a>
+    </div>
+</body>
+</html>

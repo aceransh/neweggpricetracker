@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #343a40;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #dee2e6;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+.inline-form {
+    display: inline;
+}
+
+button.info {
+    background-color: #17a2b8;
+}
+
+button.info:hover {
+    background-color: #117a8b;
+}
+
+button.danger {
+    background-color: #dc3545;
+}
+
+button.danger:hover {
+    background-color: #bd2130;
+}
+
+a.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    background-color: #6c757d;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+a.btn:hover {
+    background-color: #5a6268;
+}
+
+a.btn-secondary {
+    display: inline-block; /* Makes the link behave like a block-level element, allowing width and height to be applied */
+    padding: 10px 15px; /* Adds space inside the element, making it look like a button */
+    color: white; /* Sets the text color to white */
+    background-color: #28a745; /* Sets the background color to green */
+    border-radius: 4px; /* Rounds the corners of the button */
+    text-decoration: none; /* Removes the default underline from the link */
+    margin-top: 10px; /* Adds space above the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+}
+
+a.btn-secondary:hover {
+    background-color: #218838; /* Changes the background color when the button is hovered over */
+}
