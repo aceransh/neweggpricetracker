@@ -2,8 +2,14 @@ from datetime import datetime
 import sqlite3
 
 def create_connection():
-    conn = sqlite3.connect('price_tracker.db')
-    return conn
+    try:
+        conn = sqlite3.connect('price_tracker.db')
+        print("Connection to SQLite DB successful")
+        return conn
+    except sqlite3.Error as e:
+        print(f"The error '{e}' occurred")
+        return None
+
 
 # Create a table to store product information and price history
 def create_table(conn):
