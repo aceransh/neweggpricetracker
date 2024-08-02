@@ -130,9 +130,9 @@ class ProductScraper:
         return product_data
 
 # Test
-url = 'https://www.newegg.com/asus-pg32ucdp-32-uhd-dual-mode-4k-240hz-fhd-480hz-rog-swift-woled/p/N82E16824281314?Item=N82E16824281314'
-scraper = ProductScraper(url)
-scraper.fetch_product_data()
-product_data = scraper.return_product_data()
+# url = 'https://www.newegg.com/asus-pg32ucdp-32-uhd-dual-mode-4k-240hz-fhd-480hz-rog-swift-woled/p/N82E16824281314?Item=N82E16824281314'
+# scraper = ProductScraper(url)
+# scraper.fetch_product_data()
+# product_data = scraper.return_product_data()
 # print(scraper.price)
 # print(product_data)
