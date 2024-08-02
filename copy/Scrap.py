@@ -19,10 +19,8 @@ class ProductScraper:
             raise ValueError("Invalid URL. Please provide a valid Newegg URL.")
         print(f"Fetching data from URL: {self.url}")  # Debug statement
         response = requests.get(self.url)
-        print(f"Response status code: {response.status_code}")  # Debug statement
         doc = BeautifulSoup(response.content, 'html.parser')
         print("Document parsed with BeautifulSoup.")  # Debug statement
-        print(doc.prettify())  # Debug statement to print the parsed HTML content
 
         # Extracting the Name
         try:
@@ -122,4 +120,4 @@ scraper = ProductScraper(url)
 scraper.fetch_product_data()
 product_data = scraper.return_product_data()
 print(scraper.price)
-# print(product_data)
+print(product_data)
